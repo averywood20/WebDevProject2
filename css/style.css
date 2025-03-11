@@ -1,0 +1,471 @@
+
+/* Background color for all pages */
+html{
+    background-color: lightsteelblue;
+}
+/* Formatting the footer */
+.font-sm{
+    font-size: 0.8rem;
+}
+/* Formatting the header */
+header{
+    background-color: #5072A7;
+    color: #fff;
+}
+/* For smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px; /* Adjust padding on medium screens */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Reduce font size for tablets */
+        padding-top: 0.3rem;
+        padding-left: 0.3rem;
+    }
+
+    header nav ul {
+        padding-right: 1rem;
+        font-size: 1.3rem; /* Slightly reduce font size in navigation */
+    }
+}
+
+/* For smaller screens (mobile phones) */
+@media (max-width: 480px) {
+    header {
+        padding: 8px 10px; /* Reduce padding further for small screens */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Make the header font smaller on mobile */
+        padding-top: 0.2rem;
+        padding-left: 0.2rem;
+    }
+
+    header nav ul {
+        font-size: 1rem; /* Reduce navigation font size on mobile */
+        padding-right: 0.5rem; /* Adjust padding for smaller screens */
+    }
+
+    header nav ul li {
+        font-size: 1.2rem; /* Slightly reduce the navigation list item font size */
+    }
+}
+
+header h1{
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+header nav ul{
+    text-align: right;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+}
+header nav ul li{
+    font-size: 1.5rem;
+}
+
+header nav a{
+    color: white;
+}
+header nav a:hover,
+header nav a:active{
+    border-bottom: 4px solid #6d9773;
+}
+/* Aligning the text in the center of the page */
+body main p{
+    text-align: center;
+    font-size: medium;
+}
+
+/* Formatting the 3 main page navigation containers */
+.container-wrapper{
+    display:flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+.container {
+    background-color: lightblue;
+    width: 200px;
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+    font-size: 1rem;
+}
+
+/* For smaller Screens */
+@media (max-width: 800px) {
+    .container {
+        width: 75%; /* Adjust the width for smaller screens */
+        font-size: 0.9rem;
+        height: 120px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 100%; /* Make containers full-width on very small screens */
+        font-size: 0.8rem;
+        height: 100px;
+    }
+}
+
+.container:hover {
+    background-color: cornflowerblue;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Formatting the calender */
+.calendar {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.month {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.weekdays, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.weekdays div {
+    font-weight: bold;
+    padding: 10px 0;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.days div {
+    padding: 10px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+.days div:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .calendar {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .weekdays div, .days div {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar{
+        max-width: 100%;
+        padding: 10px;
+        overflow: auto;
+    }
+
+    .weekdays div, .days div{
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+}
+
+/* This allows the grid items to be centered when the page expands */
+.center-wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+}
+/* Formatting the groups into 2 rows and 3 columns */
+.groups-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px; 
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Each box for the groups */
+.group-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    align-self: center;
+    justify-self: center;
+}
+
+.group-box:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .groups-container {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on medium screens */
+        gap: 15px;  /* Reduce gap between containers */
+    }
+
+    .group-box {
+        padding: 15px;  /* Reduce padding */
+    }
+}
+
+/* Responsive adjustments for small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .groups-container {
+        grid-template-columns: 1fr;  /* 1 column on small screens */
+        gap: 10px;  /* Reduce gap even further */
+    }
+
+    .group-box {
+        padding: 10px;  /* Reduce padding further */
+    }
+}
+
+/* Container for the connect images and navigation containers */
+.connect-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    padding: 10px;
+}
+
+/* Left Side: Image Collage */
+.image-collage {
+    width: 60%;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.image-collage img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* For Smaller Screens */
+@media (max-width: 768px) {
+    .connect-container{
+        /* Stack images vertically */
+        flex-direction: column;
+        height: auto;
+    }
+    .image-collage {
+        width: 80%; /* Make the collage take up more space on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .connect-container{
+        /* Stack images vertically */
+        flex-direction: column;
+        height: auto;
+    }
+    .image-collage {
+        width: 100%; /* Make the collage take up full width on small screens */
+        grid-template-columns: 1fr; /* Stack the images vertically */
+    }
+}
+
+/* Right Side: Navigation Containers */
+.nav-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.connect-box {
+    background-color: rgb(217, 231, 214);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.connect-box:hover {
+    transform: scale(1.05);
+    background-color: rgb(217, 255, 214);
+}
+
+ /* Formatting the table on the church buddy page */
+.table-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table{
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+th, td{
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th{
+    background-color:  #00538C;
+    color: white;
+}
+tr:nth-child(even){
+    background-color: #f9f9f9;
+}
+tr:hover{
+    background-color: #ddd;
+}
+/* For smaller screens */
+@media (max-width: 750px) {
+    table{
+        font-size: 14px;
+        min-width: 100%;
+    }
+    th, td {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 450px) {
+
+    th, td {
+        font-size: 14px; /* Adjust font size for small screens */
+    }
+}
+
+
+/* Form Container */
+.form-container {
+    max-width: 95%;
+    width: 95%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    overflow-x: hidden;
+}
+
+/* Form Labels */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Input Fields */
+input[type="text"], textarea {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Checkbox Container */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+/* Submit Button */
+.submit-button {
+    margin-top: 15px;;
+    padding: 10px;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+    align-items: center;
+}
+
+.submit-button:hover {
+    background-color: lightskyblue;
+}
+
+/* For smaller Screens */
+@media (max-width: 720px) {
+    .form-container {
+        padding: 15px;
+    }
+    input[type="text"], textarea{
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    input[type="text"], textarea {
+        padding: 8px; /* Reduce padding on small screens */
+        font-size: 14px;
+    }
+}
+
