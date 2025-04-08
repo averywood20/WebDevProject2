@@ -7,6 +7,7 @@
     <meta name="author" content="AveryWood">
     <title>Gather In Grace</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,25 +23,31 @@
         </nav>
     </header>
 
-    <div class="prayer-container">
-        <!--Creating a form with a name box, subject line, checkbox for urgency, and a text box-->
+    <form id="prayer-form">
+        <!-- Creating a form: name, subject, checkbox for urgency, and text box-->
         <label for="name">Your Name (Optional): </label>
         <input type="text" id="name" name="name" placeholder="Enter your name">
-
+    
         <label for="subject">Subject: </label>
         <input type="text" id="subject" name="subject" required placeholder="Enter Subject">
-
+    
         <div class="checkbox-container">
             <input type="checkbox" id="urgent" name="urgent">
             <label for="urgent"> Mark as Urgent</label>
         </div>
-
+    
         <label for="prayer">Prayer Request:</label>
         <textarea id="prayer" name="prayer" rows="5" required placeholder="Write your prayer request here..."></textarea>
-
-        <!-- Button for submission-->
+        <!--Submit button-->
         <button type="submit" class="submit-button">Submit Request</button>
-    </div>
+    </form>
+    <!--Submission Modal to show after submit button is pressed-->
+   <div id="submission-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" id="close-modal">&times;</span>
+            <p>Your prayer request has been received. We're praying for you!</p>
+        </div>
+   </div>
     <footer>
         <p class="font-sm">&copy;2025 Gather In Grace. All rights reserved.</p>    
     </footer>

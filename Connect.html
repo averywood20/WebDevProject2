@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="AveryWood">
     <title>Gather In Grace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link href="css/style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,29 +22,43 @@
             </ul>
         </nav>
     </header>
-
+    <!--Carousel -->
     <div class="connect-container">
-        <!-- Having images to showcase the inside of some of these groups-->
-        <div class="image-collage">
-            <img src="images/image1.jpeg" alt="Worship Image">
-            <img src="images/image2.jpeg" alt="Worship Image">
-            <img src="images/image4.jpeg" alt="Worship Image">
-            <img src="images/image3.jpeg" alt="Worship Image">
-            <img src="images/image5.jpeg" alt="Worship Image">
-            <img src="images/image6.jpeg" alt="Worship Image">
+        <div class="carousel-container">
+            
+            <button class="carousel-btn left"><i class="fa-solid fa-chevron-left"></i></button>
+            <ul class="carousel">
+                <!--Images for the carousel-->
+                <li class="carousel-item active"><img src="images/image1.jpeg" alt="Worship Image"></li>
+                <li class="carousel-item"><img src="images/image2.jpeg" alt="Worship Image"></li>
+                <li class="carousel-item"><img src="images/image4.jpeg" alt="Worship Image"></li>
+                <li class="carousel-item"><img src="images/image3.jpeg" alt="Worship Image"></li>
+                <li class="carousel-item"><img src="images/image5.jpeg" alt="Worship Image"></li>
+                <li class="carousel-item"><img src="images/image6.jpeg" alt="Worship Image"></li>
+            </ul>
+            <button class="carousel-btn right"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel-navigation">
+                <!--Navigation buttons-->
+                <div class="nav-item active"></div>
+                <div class="nav-item"></div>
+                <div class="nav-item"></div>
+                <div class="nav-item"></div>
+                <div class="nav-item"></div>
+                <div class="nav-item"></div>
+            </div>
         </div>
-    
-        <!-- Having two navigation containers to navigate to sub pages-->
+        <!--Navigation boxes-->
         <div class="nav-container">
-            <div class="connect-box" onclick="window.location.href = 'ChurchBuddy.html'">
-                <h2>Find a Church Buddy</h2>
+             <div class="connect-box" onclick="window.location.href = 'ChurchBuddy.html'">
+                 <h2>Find a Church Buddy</h2>
             </div>
 
             <div class="connect-box" onclick="window.location.href = 'PrayerRequest.html'">
-                <h2>Submit a Prayer Request</h2>
+                 <h2>Submit a Prayer Request</h2>
             </div>
         </div>
     </div>
+
     <footer>
         <p class="font-sm">&copy;2025 Gather In Grace. All rights reserved.</p>    
     </footer>
