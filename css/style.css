@@ -165,12 +165,13 @@ main{
     cursor: pointer;
 }
 
-.verse-text:hover::after{
-    content: attr(title);
+/* Custom tooltip */
+.verse-text:hover::after {
+    content: attr(title); 
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -150%);
     padding: 8px 12px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
@@ -179,10 +180,12 @@ main{
     white-space: nowrap;
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
 }
 
+/* Hover text color */
 .verse-text:hover {
-    color: #3498db; /* Highlight the text on hover */
+    color: #3498db;
 }
 /* Smaller Screen */
 @media (max-width: 768px) {
@@ -709,7 +712,6 @@ input[type="text"], textarea {
 
     .nav-container {
         margin-top: 1rem;
-        padding-left: 300px;
         display: flex;
         justify-content: center;
     }
